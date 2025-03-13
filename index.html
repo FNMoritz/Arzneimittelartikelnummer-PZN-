@@ -1,5 +1,5 @@
 <h1>Arzneimittelartikelnummer (PZN)</h1>
-Arzneimittelartikelnummer (PZN) <input type="text" value="0660816" id="PZNInput">
+Arzneimittelartikelnummer (PZN) <input type="text" value="" id="PZNInput">
 <button onclick="clicked()">(PZN) Überprüfung</button><br><br>
 <div id="output">Hier erscheint der Rückgabewert der PZN, wenn der Button gedrückt wird.</div>
 <script>		
@@ -20,7 +20,7 @@ Arzneimittelartikelnummer (PZN) <input type="text" value="0660816" id="PZNInput"
 		}
 		
 		
-		var pruefzifferBerechnet = 11 - (pruefsumme % 11);
+		var pruefzifferBerechnet = (11 - (pruefsumme % 11)) % 11;
 		
 		
 		if (pruefzifferBerechnet == 11) {
